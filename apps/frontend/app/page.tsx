@@ -1,10 +1,21 @@
-import React from "react";
+'use client';
+
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Cloud, Layers, Globe, CodeXml, Hexagon, Coffee, PanelTop } from "lucide-react";
-import Navbar from "@/components/ui/landingpage/navbar";
-
+import {
+  Code,
+  Cloud,
+  Layers,
+  Globe,
+  CodeXml,
+  Hexagon,
+  Coffee,
+  PanelTop,
+} from "lucide-react";
+import Navbar from "@/components/landingpage/navbar";
 const LandingPage = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <header className="container mx-auto py-6">
@@ -29,6 +40,7 @@ const LandingPage = () => {
           <Button
             size="lg"
             className="bg-blue-500 text-xl hover:bg-blue-600 text-white font-medium"
+            onClick={() => router.push("/auth")}
           >
             Get Started for Free
           </Button>
@@ -71,7 +83,9 @@ const LandingPage = () => {
         </section>
 
         <section className="mt-24 text-center">
-          <h2 className="text-4xl font-extrabold mb-6">Supported Technologies</h2>
+          <h2 className="text-4xl font-extrabold mb-6">
+            Supported Technologies
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Choose from a wide range of programming languages and frameworks to
             build your projects.
@@ -84,7 +98,8 @@ const LandingPage = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-gray-300">
-                NodeJs is a popular runtime for building server-side applications.
+                NodeJs is a popular runtime for building server-side
+                applications.
               </CardContent>
             </Card>
             <Card className="bg-gray-800 border-none">
@@ -94,7 +109,8 @@ const LandingPage = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-gray-300">
-                ReactJs is a popular JavaScript library for building user interfaces.
+                ReactJs is a popular JavaScript library for building user
+                interfaces.
               </CardContent>
             </Card>
             <Card className="bg-gray-800 border-none">
@@ -104,7 +120,8 @@ const LandingPage = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-gray-300">
-                Python is a versatile programming language that is easy to learn and use.
+                Python is a versatile programming language that is easy to learn
+                and use.
               </CardContent>
             </Card>
             <Card className="bg-gray-800 border-none">
@@ -114,15 +131,13 @@ const LandingPage = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-gray-300">
-                Java is a popular programming language that is used to build enterprise applications.
+                Java is a popular programming language that is used to build
+                enterprise applications.
               </CardContent>
             </Card>
           </div>
         </section>
-
       </main>
-
-
 
       <footer className="container mx-auto mt-24 py-6 text-center text-gray-400">
         <p>&copy; 2024 CloudCode. All rights reserved.</p>

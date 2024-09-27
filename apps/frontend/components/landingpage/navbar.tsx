@@ -1,11 +1,11 @@
 'use client';
-
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Button } from "../button";
+import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -48,6 +48,7 @@ const Navbar = () => {
           <Button
             variant="secondary"
             className="bg-blue-500 hover:bg-blue-600 text-white font-medium text-lg"
+            onClick={() => router.push("/auth")}
           >
             Sign Up
           </Button>
