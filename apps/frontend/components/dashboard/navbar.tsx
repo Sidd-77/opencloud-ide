@@ -3,7 +3,8 @@ import { Bell, Search, User, LogOut } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { signOut } from "next-auth/react"
- 
+import Avatar from './avatar'
+
 
 export function Navbar() {
   return (
@@ -28,10 +29,7 @@ export function Navbar() {
             <Bell className="h-5 w-5" />
             <span className="sr-only">Notifications</span>
           </Button>
-          <Button size="icon" variant="ghost" className="text-white hover:bg-[#1e293b] hover:text-blue-500">
-            <User className="h-5 w-5" />
-            <span className="sr-only">Profile</span>
-          </Button>
+          <Avatar />
           <Button size="icon" variant="ghost" onClick={()=>signOut()} className="text-white hover:bg-[#1e293b] hover:text-red-500">
             <LogOut className="h-5 w-5" />
             <span className="sr-only" >Logout</span>
