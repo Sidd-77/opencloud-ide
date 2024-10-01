@@ -1,13 +1,11 @@
-'use client';
-// ref : https://codesandbox.io/p/sandbox/react-monaco-file-tree-ww9kis
 import React, { useState } from "react";
 import Sidebar from "./sideBar";
 import { useFilesFromSandbox } from '@/lib/utils';
 import { Code } from "./monacoEditor";
 import styled from "@emotion/styled";
 import { Type, File, Directory, findFileByName } from '@/lib/file-manager';
-import './App.css';
-import { FileTree } from '@/components/editor/filetree';
+import "./App.css";
+import { FileTree } from "./filetree";
 
 const CURRENT_SANDBOX_ID = "ww9kis";
 
@@ -34,8 +32,8 @@ const Editor = () => {
   const onSelect = (file: File) => setSelectedFile(file);
 
   return (
-    <div className=" rounded-lg">
-      <Main className=" rounded-lg">
+    <div>
+      <Main>
         <Sidebar>
           <FileTree
             rootDir={rootDir}

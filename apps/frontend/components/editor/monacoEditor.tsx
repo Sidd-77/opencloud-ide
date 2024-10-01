@@ -1,5 +1,5 @@
 import React from 'react'
-import {Editor} from "@monaco-editor/react";
+import Editor from "@monaco-editor/react";
 import {File} from '@/lib/file-manager';
 import styled from "@emotion/styled";
 
@@ -23,10 +23,12 @@ export const Code = ({selectedFile}: { selectedFile: File | undefined }) => {
         value={code}
         theme="vs-dark"
         options={{
-          minimap: {enabled: false},
           fontSize: 14,
+          minimap: {enabled: false},
+          scrollbar: {vertical: 'hidden', horizontal: 'auto'},
           scrollBeyondLastLine: false,
-          automaticLayout: true
+          automaticLayout: true,
+          readOnly: false
         }}
       />
     </Div>

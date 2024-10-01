@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Directory, File, sortDir, sortFile} from '@/lib/file-manager';
+import {Directory, File, sortDir, sortFile} from "@/lib/file-manager";
 import {getIcon} from "./icon";
 import styled from "@emotion/styled";
 
